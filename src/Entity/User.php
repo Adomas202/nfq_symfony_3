@@ -24,6 +24,27 @@ class User extends BaseUser implements UserInterface
      */
     private $website;
 
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $linkedIn;
+
+    /**
+     * @return mixed
+     */
+    public function getLinkedIn()
+    {
+        return $this->linkedIn;
+    }
+
+    /**
+     * @param mixed $linkedIn
+     */
+    public function setLinkedIn($linkedIn): void
+    {
+        $this->linkedIn = $linkedIn;
+    }
+
     public function getId()
     {
         return $this->id;
