@@ -12,7 +12,6 @@
             <a href="{{ path('fos_user_security_login') }}">{{ 'layout.login'|trans({}, 'FOSUserBundle') }}</a>
         {% endif %}
     </div>
-
     {% if app.request.hasPreviousSession %}
         {% for type, messages in app.session.flashbag.all() %}
             {% for message in messages %}
@@ -22,12 +21,10 @@
             {% endfor %}
         {% endfor %}
     {% endif %}
-
     <div>
         {% block fos_user_content %}
         {% endblock fos_user_content %}
     </div>
-
     {# Added custom code #}
     <div class="jumbotron">
         <a class="btn btn-info btn-lg" href="{{ path('home') }}">My home</a>
